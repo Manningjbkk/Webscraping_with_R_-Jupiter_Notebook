@@ -1,6 +1,6 @@
 # Webscraping_with_R_-Jupiter_Notebook
 
-Currently I am working on a project for my first ever R class and I am having some difficulty.  
+#Currently I am working on a project for my first ever R class and I am having some difficulty.  
 
  # Our target COVID-19 wiki page URL is: https://en.wikipedia.org/w/index.php?title=Template:COVID-19_testing_by_country  
   # Which has two parts: 
@@ -23,6 +23,6 @@ get_wiki_covid19_page <- function() {
      return(response)
     }
     
- This is what I have so far, I was wondering if anyone could help correct this and explain why that correction is needed.
+ #This is what I have so far, I was wondering if anyone could help correct this and explain why that correction is needed.
     
         
