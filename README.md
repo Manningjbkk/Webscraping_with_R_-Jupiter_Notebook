@@ -1,20 +1,4 @@
-# Webscraping_with_R_-Jupiter_Notebook
 
-#Currently I am working on a project for my first ever R class and I am having some difficulty.  
-
- # Our target COVID-19 wiki page URL is: https://en.wikipedia.org/w/index.php?title=Template:COVID-19_testing_by_country  
-  # Which has two parts: 
-    # 1) base URL `https://en.wikipedia.org/w/index.php  
-    # 2) URL parameter: `title=Template:COVID-19_testing_by_country`, seperated by question mark ?
-    
-  # Wiki page base
- 
-  # You will need to create a List which has an element called `title` to specify which page you want to get from Wiki
-  # in our case, it will be `Template:COVID-19_testing_by_country`
- 
-  # - Use the `GET` function in httr library with a `url` argument and a `query` arugment to get a HTTP response
-    
-  # Use the `return` function to return the response
     
 get_wiki_covid19_page <- function() {
      base_url <- "https://en.wikipedia.org/w/index.php"
@@ -23,6 +7,23 @@ get_wiki_covid19_page <- function() {
      return(response)
     }
     
- #This is what I have so far, I was wondering if anyone could help correct this and explain why that correction is needed.
+Response [https://en.wikipedia.org/w/index.php?title=Template%3ACovid-19_testing_by_country]
+  Date: 2024-08-23 23:39
+  Status: 404
+  Content-Type: text/html; charset=UTF-8
+  Size: 35.8 kB
+<!DOCTYPE html>
+<html class="client-nojs vector-feature-language-in-header-enabled vector-fea...
+<head>
+<meta charset="UTF-8">
+<title>Template:Covid-19 testing by country - Wikipedia</title>
+<script>(function(){var className="client-js vector-feature-language-in-heade...
+"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["...
+"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgPopupsFla...
+"user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.opt...
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return...
     
         
+The problem is that the colon is coming through as a hex code %3A instead of a colon.
+
+I am not sure how to get this to come through.
