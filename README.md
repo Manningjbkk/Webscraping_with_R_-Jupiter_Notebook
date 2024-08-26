@@ -1,5 +1,4 @@
-
-    
+   
 get_wiki_covid19_page <- function() {
      base_url <- "https://en.wikipedia.org/w/index.php"
      query_param <-list(title = 'Template:Covid-19_testing_by_country')
@@ -24,6 +23,6 @@ Response [https://en.wikipedia.org/w/index.php?title=Template%3ACovid-19_testing
 <script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return...
     
         
-The problem is that the colon is coming through as a hex code %3A instead of a colon.
+#The problem is that the colon is coming through as a hex code %3A instead of a colon.
 
-I am not sure how to get this to come through.
+#I am not sure how to get this to come through.
